@@ -48,7 +48,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ src, title, description, imag
                 animate={isInView ? "visible" : "hidden"}
                 variants={imageVariants}
             >
-                <Image src={src} alt={title} width={500} height={300} className="w-full h-auto object-cover rounded-lg" />
+                <a href={href} target="_blank" rel="noopener noreferrer" className="block">
+                    <Image src={src} alt={title} width={500} height={300} className="w-full h-auto object-cover rounded-lg" />
+                </a>
             </motion.div>
             <motion.div 
                 className="w-full md:w-1/2 flex flex-col justify-center items-center"
@@ -56,9 +58,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ src, title, description, imag
                 animate={isInView ? "visible" : "hidden"}
                 variants={contentVariants}
             >
-                <h2 className="text-3xl md:text-5xl font-bold mb-4">{title}</h2>
-                {/* <p className="text-lg">{description}</p> */}
-                <a href={href} target="_blank" rel="noopener noreferrer" className="group relative text-neon mt-4 inline-flex items-center px-7 py-4 bg-transparent border border-neon rounded-full overflow-hidden transition-all duration-300 ease-in-out hover:text-black">
+                <h2 className="text-3xl md:text-5xl font-bold mb-4 hidden md:block">{title}</h2>
+                <a href={href} target="_blank" rel="noopener noreferrer" className="group relative text-neon mt-4 items-center px-7 py-4 bg-transparent border border-neon rounded-full overflow-hidden transition-all duration-300 ease-in-out hover:text-black hidden md:inline-flex">
                     <span className="relative z-10 mr-2">View Project</span>
                     <span className="absolute inset-0 bg-neon transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
                     <span className="relative z-10 w-0 opacity-0 group-hover:w-5 group-hover:opacity-100 transition-all duration-300 ease-in-out">

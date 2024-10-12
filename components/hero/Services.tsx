@@ -33,7 +33,7 @@ export function Services() {
     }, []);
 
     return (
-        <div id="service" className="w-[90%] mx-auto flex flex-col items-center justify-center my-32">
+        <div id="service" className="w-[90%] mx-auto flex flex-col items-center justify-center my-16">
             <h1 className="text-2xl text-thin text-neon">
                 WHAT YOU'LL GET
             </h1>
@@ -120,8 +120,8 @@ export function Services() {
                             </div>
                         </div>
                     </div>
-                    <div className=" w-full p-10 rounded-[2rem] bg-gradient-to-b from-[#202020] to-[#191919] min-h-56 flex flex-row md:flex-row gap-10 overflow-hidden">
-                    <div className="md:max-w-[60%] flex flex-col justify-center ">
+                    <div className=" w-full p-10 rounded-[2rem] bg-gradient-to-b from-[#202020] to-[#191919] min-h-56 flex flex-col md:flex-row gap-10 overflow-hidden">
+                        <div className="md:max-w-[60%] flex flex-col justify-center ">
                             <h1 className="text-3xl mb-1">Collabrate <br /> real-time</h1>
                             <p className="text-zinc-500 text-xl mt-2">Seamlessly connect all your existing apps.</p>
                         </div>

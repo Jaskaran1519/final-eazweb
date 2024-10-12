@@ -1,6 +1,6 @@
 export function Description() {
     return (
-        <div className="w-[90%] mx-auto flex flex-col items-center justify-center my-44">
+        <div className="w-[90%] mx-auto flex flex-col items-center justify-center my-20">
             <h1 className="text-2xl text-thin text-[#dbeb6d]">
                 INTRODUCING EAZWEB
             </h1>
