@@ -3,8 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const heroFont = Protest_Strike({
-    weight: ["400"],
     subsets: ["latin"],
+    weight: "400",
+    display: 'swap',
 })
 
 const projects = [
