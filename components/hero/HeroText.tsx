@@ -8,7 +8,7 @@ const manrope = Manrope({
 
 export default function HeroText() {
     return (
-        <div className="w-full relative overflow-hidden">
+        <div className="w-full relative overflow-hidden" id="hero">
 
         <div className="mt-16 text-center max-w-[90%] md:max-w-[700px] mx-auto">
             <h1 className={`${manrope.className} text-primary text-[2.75rem] my-10 md:text-[5rem] leading-[1.1] font-semibold bg-gradient-to-tr from-zinc-500 to-white text-transparent bg-clip-text`}>

@@ -96,7 +96,7 @@ export const Work = () => {
     ];
 
     return (
-        <div className="w-[90%] mx-auto my-10">
+        <div className="w-[90%] mx-auto my-10" id='work'>
             <div className="text-center">
                 <h1 className="text-2xl font-bold text-neon">OUR WORK</h1>
                 <p className="max-w-[800px] mx-auto text-center text-4xl my-6">
@@ -116,7 +116,7 @@ export const Work = () => {
                 ))}
             </div>
             <div className='w-full flex justify-center items-center mt-5'>
-                <Link href='/work' className='group relative text-neon mt-4 inline-flex items-center px-7 py-4 bg-transparent border border-neon rounded-full overflow-hidden transition-all duration-300 ease-in-out hover:text-black'>
+                <Link href='/project' className='group relative text-neon mt-4 inline-flex items-center px-7 py-4 bg-transparent border border-neon rounded-full overflow-hidden transition-all duration-300 ease-in-out hover:text-black'>
                     <span className="relative z-10">More Work</span>
                     <span className="absolute inset-0 bg-neon transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out" style={{
                         borderRadius: '0 100px 100px 0'

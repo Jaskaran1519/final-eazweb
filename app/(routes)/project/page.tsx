@@ -44,7 +44,16 @@ const projects = [
     imageSrc: "/work/felina.png",
     link: "https://felina1519.vercel.app"
     },
-  // Add more projects as needed
+  {
+    name: "Lift Lock",
+    imageSrc: "/work/liftlock.png",
+    link: "https://liftlock.in"
+    },
+  {
+    name: "Sia Graphics",
+    imageSrc: "/work/siagraphics.png",
+    link: "https://siagraphics.vercel.app"
+    },
 ];
 
 export default function Page() {
