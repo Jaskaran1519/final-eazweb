@@ -41,13 +41,13 @@ export function Services() {
             We resolve problems associated with creative procedures.
                  </p>
                  <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 w-[90%]">
-                    <div className="w-full aspect-[9/10] rounded-[10%] bg-[#191919]">
+                    <div className="w-full aspect-[9/10] rounded-[10%] bg-[#191919] min-h-[400px] md:h-auto">
                         <Image src='/growth.png' alt="growth" width={500} height={500} className="w-[80%] mx-auto mt-6 rounded-xl" />
                     </div>
-                    <div className="w-full aspect-[9/10] rounded-[10%] bg-[#191919] relative overflow-hidden">
+                    <div className="w-full aspect-[9/10] rounded-[10%] bg-[#191919] min-h-[400px] md:h-auto relative overflow-hidden">
                         <Image src='/growth1.png' alt="growth" width={500} height={500} className="w-[70%] absolute top-[10%] left-1/2 transform -translate-x-1/2 rounded-xl z-30" />
                         <Image src='/growth1.png' alt="growth" width={500} height={500} className="w-[80%] absolute top-[15%] left-1/2 transform -translate-x-1/2 rounded-xl z-30" />
-                        <div className="absolute top-[40%] w-full leading-[1] flex flex-col pb-4">
+                        <div className="absolute top-[30%] md:top-[40%] w-full leading-[1] flex flex-col pb-4">
                             <div className="relative">
                                 <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#191919] via-[#191919] to-transparent z-10"></div>
                                 <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#191919] to-transparent z-10"></div>
@@ -86,13 +86,13 @@ export function Services() {
                             </div>
                             
                         </div>
-                        <div className="w-[80%] overflow-hidden mx-auto flex flex-col justify-end absolute bottom-10 left-10 right-10">
+                        <div className="w-[80%] overflow-hidden mx-auto flex flex-col justify-end absolute bottom-4 sm:bottom-10 left-10 right-10 min-h-[120px] sm:min-h-0">
                         <h1 className="text-2xl font-semibold mb-1">Tailor-made Design</h1>
                         <p className="text-zinc-500 text-xl">We've got the expertise to make your vision a reality.</p>
                     </div>
                     </div>
                     
-                    <div className="w-full aspect-[9/10] rounded-[10%] bg-[#191919] relative overflow-hidden">
+                    <div className="w-full aspect-[9/10] rounded-[10%] bg-[#191919] min-h-[400px] md:h-auto relative overflow-hidden">
                         <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#191919] to-transparent z-10"></div>
                         <Image src='/growth2.png' alt="growth" width={500} height={500} className="w-[80%] mx-auto rounded-xl relative z-0" />
                         <div className="w-[80%] overflow-hidden mx-auto flex flex-col justify-end absolute bottom-10 left-10 right-10">
