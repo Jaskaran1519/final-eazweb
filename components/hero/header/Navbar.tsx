@@ -27,8 +27,11 @@ const Navbar: React.FC = () => {
           <li><a onClick={() => handleScroll('service')} className="hover:text-zinc-200 duration-500 cursor-pointer">Services</a></li>
           <li><a onClick={() => handleScroll('contact')} className="hover:text-zinc-200 duration-500 cursor-pointer">Contact</a></li>
         </ul>
-        <div className='px-6 py-3 rounded-full backdrop-filter backdrop-blur-lg cursor-pointer border border-zinc-800 hover:border-primary duration-500 bg-black/30'>
-          Notify Me
+        <div 
+          onClick={() => handleScroll('footer')} 
+          className='px-6 py-3 rounded-full backdrop-filter backdrop-blur-lg cursor-pointer border border-zinc-800 hover:border-primary duration-500 bg-black/30'
+        >
+          Connect
         </div>
       </div>                    
     </nav>
