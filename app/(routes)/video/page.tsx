@@ -1,12 +1,14 @@
 "use client"
 import Loader from '@/components/Loader';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Masonry from 'react-masonry-css';
 
 export default function Page() {
   const [columns, setColumns] = useState(3);
   const [filter, setFilter] = useState('all');
   const [isLoading, setIsLoading] = useState(true);
+  const [activeVideoIndex, setActiveVideoIndex] = useState<number | null>(null);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   const videoLinks = [
     { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728621775/Sequence_01-1_gw2u69.mp4", type: "3D" },
@@ -46,6 +48,26 @@ export default function Page() {
 
   const handleFilterChange = (newFilter:any) => {
     setFilter(newFilter);
+  };
+
+  const handleVideoClick = (index: number) => {
+    if (activeVideoIndex === index) {
+      // Clicking the active video again mutes it
+      setActiveVideoIndex(null);
+      if (videoRefs.current[index]) {
+        videoRefs.current[index]!.muted = true;
+      }
+    } else {
+      // Mute previously active video
+      if (activeVideoIndex !== null && videoRefs.current[activeVideoIndex]) {
+        videoRefs.current[activeVideoIndex]!.muted = true;
+      }
+      // Unmute clicked video
+      setActiveVideoIndex(index);
+      if (videoRefs.current[index]) {
+        videoRefs.current[index]!.muted = false;
+      }
+    }
   };
 
   // Spinner component
@@ -102,17 +124,29 @@ export default function Page() {
           columnClassName="pl-4 sm:pl-6 lg:pl-8 bg-clip-padding"
         >
           {filteredVideos.map((video, index) => (
-            <div key={`${filter}-${index}`} className="mb-4 sm:mb-6 lg:mb-8">
-              <video 
-                loop 
-                muted 
-                autoPlay 
-                playsInline
-                className="w-full rounded-lg" 
-              >
-                <source src={video.url} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+            <div key={`${filter}-${index}`} className="mb-4 sm:mb-6 lg:mb-8 relative">
+              <div className={`
+                rounded-lg overflow-hidden
+                ${activeVideoIndex === index ? 'border-4 border-rainbow animate-rainbow-border' : ''}
+              `}>
+                <video 
+                  ref={el => {videoRefs.current[index] = el}}
+                  loop 
+                  muted 
+                  autoPlay 
+                  playsInline
+                  className={`w-full cursor-pointer
+                    ${activeVideoIndex !== null && activeVideoIndex !== index ? 'brightness-50' : ''}
+                  `}
+                  onClick={() => handleVideoClick(index)}
+                >
+                  <source src={video.url} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              {activeVideoIndex !== null && activeVideoIndex !== index && (
+                <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg"></div>
+              )}
             </div>
           ))}
         </Masonry>
