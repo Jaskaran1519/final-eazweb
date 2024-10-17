@@ -19,6 +19,12 @@ export default function Page() {
     { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728578907/T_shirts_soauwx.mp4", type: "Reels" },
     { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728578665/Final_Animation_Eevee_m5sxl6.mp4", type: "3D" },
     { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728639269/Intro_Video_5th_Simranpreet_Singh_Final_Render_lx2ver.mp4", type: "Reels" },
+    {url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729180865/2_ojawl1.mp4", type:"Reels"},
+    {url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729181046/Reel_Project_14_New_Graded_Output_High_Quality_-_Copy_t001ge.mp4", type:"Reels"},
+    {url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729181450/Trip_Reel_2nd_Rendered_-_Copy_ldesnu.mp4", type:"Reels"},
+    {url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729181537/ROR_5th_Reel_Ricademy_Skill_Improvement_Render_File_tr53hx.mp4", type:"Reels"},
+    {url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729181867/Trip_Reel_2nd_Rendered_-_Copy_jsjlgp.mp4", type:"Reels"},
+    {url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729182334/MB_ADD_trwvqp.mp4", type:"Reels"}
   ];
 
   useEffect(() => {
@@ -56,7 +62,7 @@ export default function Page() {
       setActiveVideoIndex(null);
       if (videoRefs.current[index]) {
         videoRefs.current[index]!.muted = true;
-      }
+      } 
     } else {
       // Mute previously active video
       if (activeVideoIndex !== null && videoRefs.current[activeVideoIndex]) {
@@ -66,6 +72,7 @@ export default function Page() {
       setActiveVideoIndex(index);
       if (videoRefs.current[index]) {
         videoRefs.current[index]!.muted = false;
+        videoRefs.current[index]!.play(); // Ensure the video starts playing
       }
     }
   };
