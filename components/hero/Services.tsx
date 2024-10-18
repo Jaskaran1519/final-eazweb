@@ -41,7 +41,7 @@ export function Services() {
             We resolve problems associated with creative procedures.
                  </p>
                  <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 w-[90%]">
-                    <div className="w-full aspect-[9/10] rounded-[10%] bg-[#191919] min-h-[400px] md:h-auto">
+                    <div className="w-full aspect-[9/10] rounded-[10%] bg-[#191919] min-h-[400px] md:h-auto flex items-center justify-center">
                         <Image src='/growth.png' alt="growth" width={500} height={500} className="w-[80%] mx-auto mt-6 rounded-xl" />
                     </div>
                     <div className="w-full aspect-[9/10] rounded-[10%] bg-[#191919] min-h-[400px] md:h-auto relative overflow-hidden">

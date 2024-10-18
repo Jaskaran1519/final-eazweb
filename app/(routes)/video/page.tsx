@@ -9,6 +9,8 @@ export default function Page() {
   const [isLoading, setIsLoading] = useState(true);
   const [activeVideoIndex, setActiveVideoIndex] = useState<number | null>(null);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const [visibleVideos, setVisibleVideos] = useState(4); // New state for visible videos
+  const [loadingMore, setLoadingMore] = useState(false); // Loading state for loading more videos
 
   const videoLinks = [
     { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728621775/Sequence_01-1_gw2u69.mp4", type: "3D" },
@@ -84,6 +86,16 @@ export default function Page() {
     </div>
   );
 
+  const handleLoadMore = () => {
+    setLoadingMore(true); // Set loading state to true
+    setTimeout(() => { // Simulate loading delay
+      setVisibleVideos(prev => prev + 4); // Load 4 more videos
+      setLoadingMore(false); // Reset loading state
+    }, 1000); // Adjust this delay as needed
+  };
+
+  const displayedVideos = filteredVideos.slice(0, visibleVideos);
+
   return (
     <div className="w-[90%] mx-auto min-h-screen">
       <div className='text-center text-3xl font-bold my-10 text-neon font-bold'>
@@ -91,30 +103,30 @@ export default function Page() {
       </div>
       <div className="flex justify-center mb-6 space-x-4">
         <button 
-          className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
+          className={`px-4 py-2 rounded-full hover:text-gray-900 text-sm font-medium transition-all duration-300 ease-in-out transform ${
             filter === 'all' 
-              ? 'bg-neon text-black' 
-              : 'text-gray-300 hover:text-neon'
+              ? 'bg-neon text-black scale-105' 
+              : 'text-gray-300 hover:text-neon hover:bg-gray-200 hover:scale-105'
           }`}
           onClick={() => handleFilterChange('all')}
         >
           All
         </button>
         <button 
-          className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
+          className={`px-4 py-2 rounded-full hover:text-gray-900 text-sm font-medium transition-all duration-300 ease-in-out transform ${
             filter === '3D' 
-              ? 'bg-neon text-black' 
-              : 'text-gray-300 hover:text-neon'
+              ? 'bg-neon text-black scale-105' 
+              : 'text-gray-300 hover:text-neon hover:bg-gray-200 hover:scale-105'
           }`}
           onClick={() => handleFilterChange('3D')}
         >
           3D Animations
         </button>
         <button 
-          className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
+          className={`px-4 py-2 rounded-full hover:text-gray-900 text-sm font-medium transition-all duration-300 ease-in-out transform ${
             filter === 'Reels' 
-              ? 'bg-neon text-black' 
-              : 'text-gray-300 hover:text-neon'
+              ? 'bg-neon text-black scale-105' 
+              : 'text-gray-300 hover:text-neon hover:bg-gray-200 hover:scale-105'
           }`}
           onClick={() => handleFilterChange('Reels')}
         >
@@ -122,7 +134,7 @@ export default function Page() {
         </button>
       </div>
       {isLoading ? (
-        <Loader />
+        <Loader /> // Use Loader component for main loading state
       ) : (
         <Masonry
           key={filter}
@@ -130,7 +142,7 @@ export default function Page() {
           className="flex w-auto -ml-4 sm:-ml-6 lg:-ml-8"
           columnClassName="pl-4 sm:pl-6 lg:pl-8 bg-clip-padding"
         >
-          {filteredVideos.map((video, index) => (
+          {displayedVideos.map((video, index) => (
             <div key={`${filter}-${index}`} className="mb-4 sm:mb-6 lg:mb-8 relative">
               <div className={`
                 rounded-lg overflow-hidden
@@ -157,6 +169,16 @@ export default function Page() {
             </div>
           ))}
         </Masonry>
+      )}
+      {visibleVideos < filteredVideos.length && ( // Show button if there are more videos to load
+        <div className="flex justify-center mt-4"> {/* Center the button */}
+          <button onClick={handleLoadMore} className="px-4 py-2 bg-neon text-black rounded-full flex items-center">
+            {loadingMore ? ( // Show spinner while loading
+              <div className="spinner mr-2" /> // Add a spinner with margin for spacing
+            ) : null}
+            {loadingMore ? 'Loading...' : 'More Videos'} {/* Show loading text or button text */}
+          </button>
+        </div>
       )}
     </div>
   );
