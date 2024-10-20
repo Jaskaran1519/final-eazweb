@@ -13,7 +13,7 @@ import Footer from "@/components/hero/Footer";
 export default function page() {
   return (
     <>
-    <div className="sticky top-8 z-50">
+    <div className="sticky top-8 z-40">
       <Navbar />
     </div>
       <HeroText/>

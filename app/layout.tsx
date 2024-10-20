@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Comfortaa } from 'next/font/google';
 import "./globals.css";
+import LoadingScreen from "@/components/LoadingScreen";
 
 const mainFont = Comfortaa({
   subsets: ['latin'],
@@ -45,6 +46,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${mainFont.className} antialiased bg-[#0d0c0d] text-[#e8e8df]`}
       >
+        <LoadingScreen/>
         {children}
       </body>
     </html>
