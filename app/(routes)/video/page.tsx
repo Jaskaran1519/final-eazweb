@@ -17,8 +17,8 @@ export default function Page() {
     { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728621600/output3_oxsplt.mp4", type: "3D" },
     { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728579048/3d_video1.1-2_tvdcia.mp4", type: "3D" },
     { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728579067/forest_animation_2_wl7igs.mp4", type: "3D" },
-    { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728578502/Sequence_01_ujdj9j.mp4", type: "Reels" },
-    { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728578907/T_shirts_soauwx.mp4", type: "Reels" },
+    { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728578502/Sequence_01_ujdj9j.mp4", type: "3D" },
+    { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728578907/T_shirts_soauwx.mp4", type: "3D" },
     { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728578665/Final_Animation_Eevee_m5sxl6.mp4", type: "3D" },
     { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728639269/Intro_Video_5th_Simranpreet_Singh_Final_Render_lx2ver.mp4", type: "Reels" },
     {url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729180865/2_ojawl1.mp4", type:"Reels"},
@@ -96,6 +96,36 @@ export default function Page() {
 
   const displayedVideos = filteredVideos.slice(0, visibleVideos);
 
+  // New Intersection Observer for video playback control
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const video = entry.target as HTMLVideoElement;
+        if (entry.isIntersecting) {
+          video.play(); // Play video if in viewport
+        } else {
+          video.pause(); // Pause video if out of viewport
+        }
+      });
+    }, { threshold: 0.5 }); // Adjust threshold as needed
+
+    // Observe each video element
+    displayedVideos.forEach((_, index) => {
+      if (videoRefs.current[index]) {
+        observer.observe(videoRefs.current[index]!);
+      }
+    });
+
+    return () => {
+      // Cleanup observer on unmount
+      displayedVideos.forEach((_, index) => {
+        if (videoRefs.current[index]) {
+          observer.unobserve(videoRefs.current[index]!);
+        }
+      });
+    };
+  }, [displayedVideos]); // Run effect when displayedVideos changes
+
   return (
     <div className="w-[90%] mx-auto min-h-screen">
       <div className='text-center text-3xl font-bold my-10 text-neon font-bold'>
@@ -120,7 +150,7 @@ export default function Page() {
           }`}
           onClick={() => handleFilterChange('3D')}
         >
-          3D Animations
+          3D 
         </button>
         <button 
           className={`px-4 py-2 rounded-full hover:text-gray-900 text-sm font-medium transition-all duration-300 ease-in-out transform ${
@@ -130,7 +160,7 @@ export default function Page() {
           }`}
           onClick={() => handleFilterChange('Reels')}
         >
-          Reels
+          Video Prod.
         </button>
       </div>
       {isLoading ? (
