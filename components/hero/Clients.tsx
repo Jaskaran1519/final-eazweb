@@ -9,9 +9,9 @@ export default function Clients() {
                     <div className="absolute left-0 top-0 bottom-0 w-[20%] bg-gradient-to-r from-[#0d0c0d] to-transparent z-10"></div>
                     <ImageWrapper src="https://framerusercontent.com/images/9TKZna4TfSaouPHKZ1nNGn5s4.jpg" alt="Client 1" />
                     <ImageWrapper src="https://framerusercontent.com/images/9TKZna4TfSaouPHKZ1nNGn5s4.jpg" alt="Client 2" />
-                    <ImageWrapper src="https://framerusercontent.com/images/9TKZna4TfSaouPHKZ1nNGn5s4.jpg" alt="Client 3" />    
-                    <ImageWrapper src="https://framerusercontent.com/images/9TKZna4TfSaouPHKZ1nNGn5s4.jpg" alt="Client 4" />    
+                    <ImageWrapper src="/brands/siagraphics.png" alt="Client 3" />    
                     <ImageWrapper src="https://framerusercontent.com/images/9TKZna4TfSaouPHKZ1nNGn5s4.jpg" alt="Client 5" />    
+                    <ImageWrapper src="/brands/liftlock.png" alt="Client 4" />    
                     <ImageWrapper src="https://framerusercontent.com/images/9TKZna4TfSaouPHKZ1nNGn5s4.jpg" alt="Client 5" />    
                     <ImageWrapper src="https://framerusercontent.com/images/9TKZna4TfSaouPHKZ1nNGn5s4.jpg" alt="Client 5" />    
                     <div className="absolute right-0 top-0 bottom-0 w-[20%] bg-gradient-to-l from-[#0d0c0d] to-transparent z-10"></div>
