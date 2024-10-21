@@ -26,7 +26,9 @@ export default function Page() {
     {url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729181450/Trip_Reel_2nd_Rendered_-_Copy_ldesnu.mp4", type:"Reels"},
     {url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729181537/ROR_5th_Reel_Ricademy_Skill_Improvement_Render_File_tr53hx.mp4", type:"Reels"},
     {url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729181867/Trip_Reel_2nd_Rendered_-_Copy_jsjlgp.mp4", type:"Reels"},
-    {url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729182334/MB_ADD_trwvqp.mp4", type:"Reels"}
+    {url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729182334/MB_ADD_trwvqp.mp4", type:"Reels"},
+    { url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729529329/D04ABC1B615EE134CBA7F4E046B176BE_video_dashinit_vjacmj.mp4", type:"3D"},
+    { url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729529337/video_20241019_200457_edit_l0lclk.mp4", type:"3D"}
   ];
 
   useEffect(() => {

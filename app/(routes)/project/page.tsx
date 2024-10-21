@@ -15,6 +15,16 @@ const projects = [
     link: "https://fizzi-demo.vercel.app/"
   },
   {
+    name:"Bawa",
+    imageSrc:"/work/bawa.png",
+    link:"http://bawajewels.com/"
+  },
+  {
+    name:"Harmilap Boutique",
+    imageSrc:"/work/harmilap.png",
+    link:"http://harmilapboutique.com/"
+  },
+  {
     name: "Real Estate",
     imageSrc: "/work/realestate.png",
     link: "https://real-estate-web.pages.dev/"
