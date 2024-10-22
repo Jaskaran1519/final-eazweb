@@ -9,8 +9,8 @@ const reviews = [
     img: "https://avatar.vercel.sh/jack",
   },
   {
-    name: "Aman Singh",
-    username: "@aman",
+    name: "Switchfixx Electricals",
+    username: "@switchfixx",
     body: "Amazing! The whole process was smooth and it saved a lot of time",
     img: "https://avatar.vercel.sh/jill",
   },
@@ -21,8 +21,8 @@ const reviews = [
     img: "https://avatar.vercel.sh/john",
   },
   {
-    name: "Akash Gupta",
-    username: "@akash",
+    name: "Sia Graphics",
+    username: "@siagraphics",
     body: "Nice and clean work, I wish you guys good luck for your future work",
     img: "https://avatar.vercel.sh/jane",
   },
@@ -33,9 +33,9 @@ const reviews = [
     img: "https://avatar.vercel.sh/jenny",
   },
   {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "Harmilap",
+    username: "@harmilap",
+    body: "Loved to work with Jaskaran and his team, we will work again in the near future",
     img: "https://avatar.vercel.sh/james",
   },
 ];
