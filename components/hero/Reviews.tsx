@@ -27,9 +27,9 @@ const reviews = [
     img: "https://avatar.vercel.sh/jane",
   },
   {
-    name: "Aufour.co",
-    username: "@aufour",
-    body: "Amazing work, all of our customers are very satisfied with you product",
+    name: "Lift Lock",
+    username: "@liftlock",
+    body: "Great customer service and the whole process was super clean",
     img: "https://avatar.vercel.sh/jenny",
   },
   {
