@@ -47,7 +47,7 @@ export default function Contact() {
                             placeholder="email@example.com"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="w-full text-[1rem] px-10 py-5 pr-40 rounded-full bg-transparent border border-gray-300"
+                            className="w-full text-[1rem] px-10 py-5 pr-10 rounded-full bg-transparent border border-gray-300"
                             required
                         />
                     </div>
@@ -57,7 +57,7 @@ export default function Contact() {
                             placeholder="Phone number"
                             value={phoneNumber}
                             onChange={(e) => setPhoneNumber(e.target.value)}
-                            className="w-full text-[1rem] px-10 py-5 pr-40 rounded-full bg-transparent border border-gray-300"
+                            className="w-full text-[1rem] px-10 py-5 pr-10 rounded-full bg-transparent border border-gray-300"
                             required
                         />
                     </div>
@@ -65,7 +65,7 @@ export default function Contact() {
                         <select
                             value={purpose}
                             onChange={(e) => setPurpose(e.target.value)}
-                            className="w-full text-[1rem] px-10 py-5 pr-40 rounded-full bg-transparent border border-gray-300 appearance-none text-white"
+                            className="w-full text-[1rem] px-10 py-5 pr-16 rounded-full bg-transparent border border-gray-300 appearance-none text-white"
                             required
                             style={{
                                 WebkitAppearance: 'none',
@@ -77,7 +77,7 @@ export default function Contact() {
                             <option value="quote" className="bg-zinc-900 text-white text-[1rem] py-2 hover:bg-zinc-700">I want to get a quote</option>
                             <option value="discuss" className="bg-zinc-900 text-white text-[1rem] py-2 hover:bg-zinc-700">I want to discuss something</option>
                         </select>
-                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-300">
+                        <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center px-2 text-gray-300">
                             <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                 <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                             </svg>
