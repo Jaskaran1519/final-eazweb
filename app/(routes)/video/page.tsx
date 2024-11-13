@@ -13,22 +13,15 @@ export default function Page() {
   const [loadingMore, setLoadingMore] = useState(false); // Loading state for loading more videos
 
   const videoLinks = [
-    { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728621775/Sequence_01-1_gw2u69.mp4", type: "3D" },
-    { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728621600/output3_oxsplt.mp4", type: "3D" },
-    { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728579048/3d_video1.1-2_tvdcia.mp4", type: "3D" },
-    { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728579067/forest_animation_2_wl7igs.mp4", type: "3D" },
-    { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728578502/Sequence_01_ujdj9j.mp4", type: "3D" },
-    { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728578907/T_shirts_soauwx.mp4", type: "3D" },
-    { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728578665/Final_Animation_Eevee_m5sxl6.mp4", type: "3D" },
-    { url: "https://res.cloudinary.com/drl2qcn1t/video/upload/v1728639269/Intro_Video_5th_Simranpreet_Singh_Final_Render_lx2ver.mp4", type: "Reels" },
-    {url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729180865/2_ojawl1.mp4", type:"Reels"},
-    {url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729181046/Reel_Project_14_New_Graded_Output_High_Quality_-_Copy_t001ge.mp4", type:"Reels"},
-    {url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729181450/Trip_Reel_2nd_Rendered_-_Copy_ldesnu.mp4", type:"Reels"},
-    {url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729181537/ROR_5th_Reel_Ricademy_Skill_Improvement_Render_File_tr53hx.mp4", type:"Reels"},
-    {url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729181867/Trip_Reel_2nd_Rendered_-_Copy_jsjlgp.mp4", type:"Reels"},
-    {url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729182334/MB_ADD_trwvqp.mp4", type:"Reels"},
-    { url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729529329/D04ABC1B615EE134CBA7F4E046B176BE_video_dashinit_vjacmj.mp4", type:"3D"},
-    { url:"https://res.cloudinary.com/drl2qcn1t/video/upload/v1729529337/video_20241019_200457_edit_l0lclk.mp4", type:"3D"}
+    { url: "https://utfs.io/f/gT2gu5kz3l1urkAvFdSuJ3Pz518UIwqApeCGi7daHODsMYgb", type: "3D" },
+    { url: "https://utfs.io/f/gT2gu5kz3l1uhbrbKYEdS1cR3DAOBsJgMqPye6lIKFHLoCVm", type: "3D" },
+    { url: "https://utfs.io/f/gT2gu5kz3l1uyYWfmThKxFmOaN6ceMJnkg1hBjSsvlqwi94y", type: "3D" },
+    { url: "https://utfs.io/f/gT2gu5kz3l1uy2CfB3hKxFmOaN6ceMJnkg1hBjSsvlqwi94y", type: "3D" },
+    { url: "https://utfs.io/f/gT2gu5kz3l1uu3ILtRDufXIvki0adSUbF8MowAxyHnCWK2Nj", type: "3D" },
+    { url: "https://utfs.io/f/gT2gu5kz3l1ut46mkislc6bINSmTdukFxUXg3LBQvM0K5Hns", type: "3D" },
+    { url: "https://utfs.io/f/gT2gu5kz3l1utpee7Aslc6bINSmTdukFxUXg3LBQvM0K5Hns", type: "3D" },
+    { url: "https://utfs.io/f/gT2gu5kz3l1ucG3liAUOsSPDf42G3NxzJdkgWYEvXb5cZ9pI", type: "3D" },
+    { url: "https://utfs.io/f/gT2gu5kz3l1uqWLExcFZMSvw6KDQTa2X7HjbgAEoY4iChtl1", type: "3D" },
   ];
 
   useEffect(() => {
