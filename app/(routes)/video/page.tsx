@@ -13,15 +13,20 @@ export default function Page() {
   const [loadingMore, setLoadingMore] = useState(false); // Loading state for loading more videos
 
   const videoLinks = [
-    { url: "https://utfs.io/f/gT2gu5kz3l1urkAvFdSuJ3Pz518UIwqApeCGi7daHODsMYgb", type: "3D" },
-    { url: "https://utfs.io/f/gT2gu5kz3l1uhbrbKYEdS1cR3DAOBsJgMqPye6lIKFHLoCVm", type: "3D" },
-    { url: "https://utfs.io/f/gT2gu5kz3l1uyYWfmThKxFmOaN6ceMJnkg1hBjSsvlqwi94y", type: "3D" },
-    { url: "https://utfs.io/f/gT2gu5kz3l1uy2CfB3hKxFmOaN6ceMJnkg1hBjSsvlqwi94y", type: "3D" },
-    { url: "https://utfs.io/f/gT2gu5kz3l1uu3ILtRDufXIvki0adSUbF8MowAxyHnCWK2Nj", type: "3D" },
+    { url: "https://res.cloudinary.com/dtopsoqao/video/upload/v1731561791/Sequence_01-1_or2wwc.mp4", type: "3D" },
+    { url: "https://res.cloudinary.com/dtopsoqao/video/upload/v1731562173/output3_opoxtr.mp4", type: "CGI" },
+    { url: "https://res.cloudinary.com/dtopsoqao/video/upload/v1731561289/eazweb_cosmetics_video_q7gfli.mp4", type: "3D" },
+    { url: "https://res.cloudinary.com/dtopsoqao/video/upload/v1731561899/Sequence_01_oji4cg.mp4", type: "3D" },
+    { url: "https://res.cloudinary.com/dtopsoqao/video/upload/v1731561639/T_shirts_g59ymv.mp4", type: "3D" },
+    { url: "https://res.cloudinary.com/dtopsoqao/video/upload/v1731561210/3d_video1.1-2_dxr1fg.mp4", type: "3D" },
+    { url: "https://res.cloudinary.com/dtopsoqao/video/upload/v1731561121/forest_animation_2_gbervt.mp4", type: "3D" },
     { url: "https://utfs.io/f/gT2gu5kz3l1ut46mkislc6bINSmTdukFxUXg3LBQvM0K5Hns", type: "3D" },
-    { url: "https://utfs.io/f/gT2gu5kz3l1utpee7Aslc6bINSmTdukFxUXg3LBQvM0K5Hns", type: "3D" },
-    { url: "https://utfs.io/f/gT2gu5kz3l1ucG3liAUOsSPDf42G3NxzJdkgWYEvXb5cZ9pI", type: "3D" },
-    { url: "https://utfs.io/f/gT2gu5kz3l1uqWLExcFZMSvw6KDQTa2X7HjbgAEoY4iChtl1", type: "3D" },
+    { url: "https://res.cloudinary.com/dtopsoqao/video/upload/v1731563117/MB_ADD_qyg4zl.mp4", type: "Reels" },
+    { url: "https://res.cloudinary.com/dtopsoqao/video/upload/v1731561022/Intro_Video_5th_Simranpreet_Singh_Final_Render_s1en3m.mp4", type: "Reels" },
+    { url: "https://res.cloudinary.com/dtopsoqao/video/upload/v1731563931/Trip_Promotional_Reel_Rendered_File_1_bw2xhd.mp4", type: "Reels" },
+    { url: "https://res.cloudinary.com/dtopsoqao/video/upload/v1731565694/ROR_5th_Reel_Ricademy_Skill_Improvement_Render_File_bqz4or.mp4", type: "Reels" },
+    { url: "https://res.cloudinary.com/dtopsoqao/video/upload/v1731561432/Final_Animation_Eevee_tfg4ei.mp4", type: "3D" },
+    { url: "https://res.cloudinary.com/dtopsoqao/video/upload/v1731559642/Reel_Project_14_New_Graded_Output_High_Quality_ewo2bu.mp4", type: "Reels" },
   ];
 
   useEffect(() => {
@@ -123,7 +128,7 @@ export default function Page() {
 
   return (
     <div className="w-[90%] mx-auto min-h-screen">
-      <div className='text-center text-3xl font-bold my-10 text-neon font-bold'>
+      <div className='text-center text-3xl font-bold my-10 text-neon'>
         <h1>Content</h1>
       </div>
       <div className="flex justify-center mb-6 space-x-4">
@@ -157,7 +162,18 @@ export default function Page() {
         >
           Video Prod.
         </button>
+        <button 
+          className={`px-4 py-2 rounded-full hover:text-gray-900 text-sm font-medium transition-all duration-300 ease-in-out transform ${
+            filter === 'CGI' 
+              ? 'bg-neon text-black scale-105' 
+              : 'text-gray-300 hover:text-neon hover:bg-gray-200 hover:scale-105'
+          }`}
+          onClick={() => handleFilterChange('CGI')}
+        >
+          CGI
+        </button>
       </div>
+
       {isLoading ? (
         <Loader /> // Use Loader component for main loading state
       ) : (

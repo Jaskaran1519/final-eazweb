@@ -24,7 +24,7 @@ export default function Videos() {
                     <div className="w-full h-full bg-gray-800 rounded-lg overflow-hidden">
                         <video
                             className="w-full h-full object-cover"
-                            src="https://res.cloudinary.com/drl2qcn1t/video/upload/v1728578907/T_shirts_soauwx.mp4"
+                            src="https://res.cloudinary.com/dtopsoqao/video/upload/v1731561639/T_shirts_g59ymv.mp4"
                             
                             autoPlay
                             muted
