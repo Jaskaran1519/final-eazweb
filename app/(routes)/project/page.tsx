@@ -15,6 +15,11 @@ const projects = [
     link: "https://fizzi-demo.vercel.app/"
   },
   {
+    name: "Switchfixx",
+    imageSrc: "/work/switchfixx.png",
+    link: "https://switchfixx.co.nz/"
+  },
+  {
     name:"Bawa",
     imageSrc:"/work/bawa.png",
     link:"http://bawajewels.com/"
