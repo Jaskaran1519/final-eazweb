@@ -34,11 +34,7 @@ const projects = [
     imageSrc: "/work/realestate.png",
     link: "https://real-estate-web.pages.dev/"
   },
-  {
-    name: "Ricaverse",
-    imageSrc: "/work/ricaverse.png",
-    link: "https://ricaverse.in`"
-    },
+  
   {
     name: "Portfolio",
     imageSrc: "/work/jaskaran.png",
