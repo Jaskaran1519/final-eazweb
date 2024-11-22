@@ -30,6 +30,11 @@ const projects = [
     link:"http://harmilapboutique.com/"
   },
   {
+    name:"Butter-baker",
+    imageSrc:"/work/butter.png",
+    link:"https://butter-baker.com/"
+  },
+  {
     name: "Real Estate",
     imageSrc: "/work/realestate.png",
     link: "https://real-estate-web.pages.dev/"
