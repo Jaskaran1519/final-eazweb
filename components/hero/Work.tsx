@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView, easeInOut } from "framer-motion";
@@ -151,7 +151,7 @@ export const Work = () => {
             title={project.title}
             description={project.description}
             imageOnLeft={index % 2 === 0}
-            href={project.href} // New prop for project link
+            href={project.href}
           />
         ))}
       </div>
@@ -172,3 +172,5 @@ export const Work = () => {
     </div>
   );
 };
+
+export default Work;
