@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
+import { Volume2, VolumeOff } from "lucide-react";
 
 interface VideoWithButtonProps {
   videoSrc: string;
@@ -11,6 +12,7 @@ const ARvideo: React.FC<VideoWithButtonProps> = ({ videoSrc, buttonLink }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const controls = useAnimation();
   const [isVisible, setIsVisible] = useState(false);
+  const [isMuted, setIsMuted] = useState(true); // Initialize as muted
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -51,15 +53,14 @@ const ARvideo: React.FC<VideoWithButtonProps> = ({ videoSrc, buttonLink }) => {
 
   const toggleMute = () => {
     if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted;
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
     }
   };
 
   return (
     <div className="relative overflow-hidden mt-10" ref={containerRef}>
-      <div className="w-[90%] mx-auto max-w-[900px] relative overflow-hidden rounded-lg pb-32 sm:pb-0">
-        {" "}
-        {/* Added sm:pb-16 */}
+      <div className="w-[90%] mx-auto max-w-[1200px] relative overflow-hidden rounded-lg pb-32 sm:pb-0">
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -75,8 +76,7 @@ const ARvideo: React.FC<VideoWithButtonProps> = ({ videoSrc, buttonLink }) => {
           ref={videoRef}
           autoPlay
           loop
-          muted
-          onClick={toggleMute}
+          muted={isMuted} // Control mute state with isMuted
           className="w-full aspect-video object-cover"
           style={{
             mask: "radial-gradient(circle at center, black 60%, transparent 100%)",
@@ -84,6 +84,13 @@ const ARvideo: React.FC<VideoWithButtonProps> = ({ videoSrc, buttonLink }) => {
               "radial-gradient(circle at center, black 60%, transparent 100%)",
           }}
         />
+        <button
+          onClick={toggleMute}
+          className="absolute top-4 right-4 bg-gray-800 bg-opacity-50 rounded-full p-2 text-white hover:bg-opacity-70 focus:outline-none"
+          style={{ zIndex: 50 }} // Ensure it's above other elements
+        >
+          {isMuted ? <VolumeOff /> : <Volume2 />}
+        </button>
       </div>
 
       <motion.button
