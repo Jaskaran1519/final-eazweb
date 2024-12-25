@@ -72,7 +72,7 @@ const projects = [
     link: "https://liftlock.in",
   },
   {
-    name: "Sia Graphics",
+    name: "Sia Graphics (Under developement)",
     imageSrc: "/work/siagraphics.png",
     link: "https://siagraphics.vercel.app",
   },
