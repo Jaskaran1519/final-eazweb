@@ -122,16 +122,16 @@ export const Work = () => {
       href: "https://real-estate-web.pages.dev/",
     },
     {
-      src: "/work/fizzi.png",
-      title: "Fizzi",
+      src: "/work/cote.png",
+      title: "Cote",
       description: "Description for Project 3...",
-      href: "https://fizzi-demo.vercel.app/",
+      href: "https://www.cotenewzealand.com/",
     },
     {
-      src: "/work/jaskaran.png",
-      title: "Portfolio",
+      src: "/work/switchfixx.png",
+      title: "Switchfixx",
       description: "Description for Project 2...",
-      href: "https://jaskaran1519.vercel.app/",
+      href: "https://switchfixx.co.nz/",
     },
   ];
 
