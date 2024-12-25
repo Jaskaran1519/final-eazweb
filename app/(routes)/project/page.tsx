@@ -45,21 +45,21 @@ const projects = [
     imageSrc: "/work/jaskaran.png",
     link: "https://jaskaran1519.vercel.app",
   },
-  {
-    name: "Sharelit",
-    imageSrc: "/work/sharelit.png",
-    link: "https://sharelit.vercel.app",
-  },
-  {
-    name: "Quizesty",
-    imageSrc: "/work/quizesty.png",
-    link: "https://quizesty.vercel.app",
-  },
-  {
-    name: "Felina",
-    imageSrc: "/work/felina.png",
-    link: "https://felina1519.vercel.app",
-  },
+  // {
+  //   name: "Sharelit",
+  //   imageSrc: "/work/sharelit.png",
+  //   link: "https://sharelit.vercel.app",
+  // },
+  // {
+  //   name: "Quizesty",
+  //   imageSrc: "/work/quizesty.png",
+  //   link: "https://quizesty.vercel.app",
+  // },
+  // {
+  //   name: "Felina",
+  //   imageSrc: "/work/felina.png",
+  //   link: "https://felina1519.vercel.app",
+  // },
   {
     name: "Lift Lock",
     imageSrc: "/work/liftlock.png",
