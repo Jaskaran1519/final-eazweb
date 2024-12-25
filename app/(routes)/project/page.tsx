@@ -14,10 +14,16 @@ const projects = [
   //   imageSrc: "/work/fizzi.png",
   //   link: "https://fizzi-demo.vercel.app/"
   // },
+
   {
     name: "Switchfixx",
     imageSrc: "/work/switchfixx.png",
     link: "https://switchfixx.co.nz/",
+  },
+  {
+    name: "Cote",
+    imageSrc: "/work/cote.png",
+    link: "https://www.cotenewzealand.com/",
   },
   {
     name: "Bawa",
