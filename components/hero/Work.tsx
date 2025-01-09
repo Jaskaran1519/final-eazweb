@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView, easeInOut } from "framer-motion";
@@ -116,10 +116,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 export const Work = () => {
   const projects = [
     {
-      src: "/work/realestate.png",
-      title: "Real Estate",
+      src: "/work/butter.png",
+      title: "Butter Baker",
       description: "Description for Project 1...",
-      href: "https://real-estate-web.pages.dev/",
+      href: "https://butter-baker.com/",
     },
     {
       src: "/work/cote.png",
