@@ -31,11 +31,6 @@ const projects = [
     link: "http://bawajewels.com/",
   },
   {
-    name: "Harmilap Boutique",
-    imageSrc: "/work/harmilap.png",
-    link: "http://harmilapboutique.com/",
-  },
-  {
     name: "Butter-baker",
     imageSrc: "/work/butter.png",
     link: "https://butter-baker.com/",
