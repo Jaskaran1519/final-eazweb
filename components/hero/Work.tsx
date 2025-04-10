@@ -122,10 +122,10 @@ export const Work = () => {
       href: "https://butter-baker.com/",
     },
     {
-      src: "/work/cote.png",
-      title: "Cote",
+      src: "/work/interior.png",
+      title: "Luxdesign",
       description: "Description for Project 3...",
-      href: "https://www.cotenewzealand.com/",
+      href: "https://luxdesign.ca/",
     },
     {
       src: "/work/switchfixx.png",
