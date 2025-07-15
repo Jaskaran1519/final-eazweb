@@ -116,10 +116,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 export const Work = () => {
   const projects = [
     {
-      src: "/work/butter.png",
-      title: "Butter Baker",
+      src: "/work/luxury.jpg",
+      title: "Luxury Machines",
       description: "Description for Project 1...",
-      href: "https://butter-baker.com/",
+      href: "https://luxurymachines.in",
     },
     {
       src: "/work/interior.png",

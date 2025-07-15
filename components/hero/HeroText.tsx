@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Manrope } from 'next/font/google';
 import { useState } from 'react';
+import { scroller } from 'react-scroll';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -46,24 +47,17 @@ export default function HeroText() {
                 </h1>
                 <h2 className="mt-4 text-secondary md:max-w-[70%] mx-auto text-gray-500 text-[1.25rem] leading-tight">Innovative design and content services for business firms and emerging business weiry of typical aesthetic methodology. Arriving shortly</h2>
                 <div className="flex flex-col items-center justify-center md:max-w-[70%] mx-auto mt-10">
-                    <form onSubmit={handleEmailSubmit} className="relative w-full"> {/* Add form for email submission */}
-                        <input 
-                            type="text" 
-                            placeholder="Enter your email" 
-                            value={email} // Bind email state
-                            onChange={(e) => setEmail(e.target.value)} // Update email state
-                            className="w-full text-[1rem] px-10 py-5 pr-40 rounded-full bg-transparent border border-gray-300" 
-                            required 
-                        />
-                        <button 
-                            type="submit" 
-                            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#deff00] text-black font-semibold px-6 py-3 rounded-full"
-                            disabled={isLoading} // Disable button while loading
-                        >
-                            {isLoading ? 'Sending...' : 'Get Notified'} {/* Show loading text */}
-                        </button>
-                    </form>
-                    {message && <p className="mt-4 text-sm">{message}</p>} {/* Display feedback message */}
+                    <div
+                        onClick={() => scroller.scrollTo('work', {
+                            duration: 800,
+                            delay: 0,
+                            smooth: 'easeInOutQuart',
+                            offset: -80
+                        })}
+                        className="bg-[#deff00] text-black font-semibold px-6 py-3 rounded-full cursor-pointer"
+                    >
+                        Our Work
+                    </div>
                 </div>
             </div>
             <div className="relative w-full mx-auto mt-10">
